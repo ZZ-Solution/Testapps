@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'polls.urls'
+ROOT_URLCONF = 'HelloWorld.urls'
 
 TEMPLATES = [
     {
