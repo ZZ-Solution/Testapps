@@ -2,4 +2,4 @@ from django.shortcuts import HttpResponse
 import datetime
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render_to_response("helloDJ/home.html",{"Testing" : "Django Template Inheritance ","HelloHello" : "Hello World - Django"})
