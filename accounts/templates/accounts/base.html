@@ -1,0 +1,16 @@
+<html>
+	<head> 
+		<title>This is Hello World app!</title> 
+	</head> 
+	<body> 
+		{% if user.is_authenticated %}
+    		<p>Welcome, {{ user.username }}
+    		<a href="/accounts/password_change">[Change Password]</a>
+    		<a href="/accounts/logout">[logout]</a></p>
+		{% else %}
+    		<p>Welcome, Guest <a href="/accounts/login">[login]</a></p>
+		{% endif %}
+		{% block content %} 
+		{% endblock %}
+ 	</body> 
+ </html>
