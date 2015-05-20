@@ -13,7 +13,7 @@ urlpatterns = patterns('',
         name='password_change',
         kwargs={
                'template_name': 'accounts/password_change_form.html',
-               'post_change_redirect':'accounts/password_change_done',
+               'post_change_redirect':'accounts:password_change_done',
                }
     ),
     url(
