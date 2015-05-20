@@ -9,7 +9,11 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
+import dj_database_url
 
+#DATABASES['default'] =  dj_database_url.config()
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
@@ -25,7 +29,7 @@ SECRET_KEY = 'zo%$3yfqeuvcil59jq=yugr#!$0%4b1mrfoj*qrcx=(7idlccj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
