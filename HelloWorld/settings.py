@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'HelloWorldApp',
     'polls',
+    'accounts',
 )
 
 MIDDLEWARE_CLASSES = (
