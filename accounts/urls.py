@@ -1,13 +1,13 @@
 from django.conf.urls import patterns, url
-from django.contrib import admin
-from django.conf import settings
-admin.autodiscover()
 urlpatterns = patterns('',
-    url(r'^login$', 'django.contrib.auth.views.login', {'template_name': 'accounts/login.html'}),
-    url(r'^logout$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
-	# url(r'^password_change$', 'django.contrib.auth.views.password_change', {'template_name': 'accounts/password_change_form.html'}),
-	# url(r'^password_change_done$', 'django.contrib.auth.views.password_change_done', {'template_name': 'accounts/password_change_done.html'}),
-	url(
+    url(
+        r'^login/$',
+        'django.contrib.auth.views.login',
+        name='login',
+        kwargs={'template_name': 'accounts/login.html'}
+    ),
+
+    url(
         r'^password_change$',
         'django.contrib.auth.views.password_change',
         name='password_change',
@@ -22,5 +22,11 @@ urlpatterns = patterns('',
         name='password_change_done',
         kwargs={'template_name': 'accounts/password_change_done.html'}
     ),
-
+    
+    url(
+        r'^logout/$',
+        'django.contrib.auth.views.logout',
+        name='logout',
+        kwargs={'next_page': '/'}
+    ),
 )
