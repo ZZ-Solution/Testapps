@@ -9,6 +9,7 @@
 {{ form }}
 </table>
 <input type="submit" value="login" />
+<a href="{% url 'accounts:password_reset' %}">Forgot your password?</a>
 <input type="hidden" name="next" value="/" />
 </form>
 {% endblock %}

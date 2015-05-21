@@ -28,6 +28,12 @@ SECRET_KEY = 'zo%$3yfqeuvcil59jq=yugr#!$0%4b1mrfoj*qrcx=(7idlccj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+EMAIL_HOST_USER = 'schourey1988@gmail.com'
+EMAIL_HOST_PASSWORD = '9754431024chourey'
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'sandeep@zealousweb.com'
 
 ALLOWED_HOSTS = ['*']
 
@@ -74,6 +80,11 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    )
 
 WSGI_APPLICATION = 'HelloWorld.wsgi.application'
 
