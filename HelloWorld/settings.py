@@ -28,14 +28,26 @@ SECRET_KEY = 'zo%$3yfqeuvcil59jq=yugr#!$0%4b1mrfoj*qrcx=(7idlccj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
-EMAIL_HOST_USER = 'schourey1988@gmail.com'
-EMAIL_HOST_PASSWORD = '9754431024chourey'
-EMAIL_USE_TLS = False
-DEFAULT_FROM_EMAIL = 'sandeep@zealousweb.com'
+TEMPLATE_DEBUG = True
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'testing.demo@gmail.com'
+# EMAIL_HOST_PASSWORD = 'this@admin'
+# DEFAULT_FROM_EMAIL = 'testing.demo@gmail.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# SERVER_EMAIL = 'testing.demo@gmail.com'
 
 ALLOWED_HOSTS = ['*']
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'testing.demo@gmail.com'
+EMAIL_HOST_PASSWORD = 'this@admin'
+DEFAULT_FROM_EMAIL = 'testing.demo@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 # Application definition
@@ -64,6 +76,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'HelloWorld.urls'
+LOGIN_URL = '/accounts/login/'
 
 TEMPLATES = [
     {

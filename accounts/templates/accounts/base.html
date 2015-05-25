@@ -6,7 +6,6 @@
 		{% if user.is_authenticated %}
 		    <p>
 		    Welcome, {{ user.username }}
-		    <a href="{% url 'accounts:password_change' %}">[Change Password]</a>
 		    <a href="{% url 'accounts:logout' %}">[logout]</a>
 		    </p>
 		{% else %}
